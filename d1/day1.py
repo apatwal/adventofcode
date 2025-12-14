@@ -17,7 +17,7 @@ count exactly how many times the dial points at 0
 
 '''
 
-input = open('input.txt').read().strip()
+input = open('d1/input.txt').read().strip()
 
 dial = 50
 count = 0
