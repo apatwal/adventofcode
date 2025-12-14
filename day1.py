@@ -52,9 +52,26 @@ for command in input.split():
         else:
             dial += steps
     
-    # print(direction, steps, dial)
 
     if dial == 0:
         count += 1
+
+print(count)
+
+''' PART 2'''
+dial = 50
+count = 0
+
+for command in input.split():
+    direction = command[0]
+    steps = int(command[1:])
+
+    dir = 1 if direction == 'R' else -1
+    for i in range(steps):
+            dial += dir
+            if dial < 0 or dial > 99:
+                dial = 99 if dial < 0 else 0
+            if dial == 0:
+                count += 1
         
 print(count)
